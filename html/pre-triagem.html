@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Preencha as informações iniciais para o registro demonstrativo.">
+    <meta name="description" content="Formulário de pré-triagem para coleta de informações do paciente.">
     <title>Pré-triagem | Prévia Saúde</title>
 </head>
 <body>
@@ -17,34 +17,50 @@
     </header>
     <main>
         <h2>Pré-triagem do paciente</h2>
-        <p>O objetivo do nosso formulário de pré-striagem é coletar informações para auxiliar no processo de triagem.</p>
+        <p>O objetivo do nosso formulário de pré-triagem é coletar informações para auxiliar no processo de triagem.</p>
         <label for="progresso-formulario">Progresso do formulário:</label>
         <progress id="progresso-formulario" value="1" max="3">1 de 3</progress>
         <form>
-            <fieldset>
-                <legend>Identificação do paciente</legend>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-                <label for="data-nascimento">Data de nascimento:</label>
-                <input type="date" id="data-nascimento" name="data-nascimento" required>
-            </fieldset>
-            <fieldset>
-                <legend>Descrição dos sintomas</legend>
-                <label for="sintomas">Sintomas:</label>
-                <textarea id="sintomas" name="sintomas" placeholder="Descreva seus sintomas aqui..." required></textarea>
-                <label for="sintomas-dias">Há quantos dias os sintomas começaram?</label>
-                <select id="sintomas-dias" name="sintomas-dias" required>
-                    <option value="">Selecione...</option>
-                    <option value="1 a 3 dias">1 a 3 dias</option>
-                    <option value="4 a 7 dias">4 a 7 dias</option>
-                    <option value="8 a 14 dias">8 a 14 dias</option>
-                    <option value="mais de 14 dias">Mais de 14 dias</option>
-                </select>
-                <label for="tamanho-da-dor">Intensidade da dor (0 a 10):</label>
-                <input type="range" id="tamanho-da-dor" name="tamanho-da-dor" min="0" max="10" step="1">
-                <p>0 = Sem dor | 10 = Dor insuportável</p>
-            </fieldset>
-            <button type="submit">Enviar</button>
+            <section>
+                <h3>Etapa 1 — Identificação</h3>
+                <fieldset>
+                    <legend>Identificação do paciente</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    <label for="data-nascimento">Data de nascimento:</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+                </fieldset>
+                <button type="button">Avançar</button>
+            </section>
+            <section>
+                <h3>Etapa 2 - Sintomas</h3>
+                <fieldset>
+                    <legend>Descrição dos sintomas</legend>
+                    <label for="sintomas">Sintomas:</label>
+                    <textarea id="sintomas" name="sintomas" placeholder="Descreva seus sintomas aqui..." required></textarea>
+                    <label for="sintomas-dias">Há quantos dias os sintomas começaram?</label>
+                    <select id="sintomas-dias" name="sintomas-dias" required>
+                        <option value="">Selecione...</option>
+                        <option value="1 a 3 dias">1 a 3 dias</option>
+                        <option value="4 a 7 dias">4 a 7 dias</option>
+                        <option value="8 a 14 dias">8 a 14 dias</option>
+                        <option value="mais de 14 dias">Mais de 14 dias</option>
+                    </select>
+                    <label for="tamanho-da-dor">Intensidade da dor (0 a 10):</label>
+                    <input type="range" id="tamanho-da-dor" name="tamanho-da-dor" min="0" max="10" step="1">
+                    <p>0 = Sem dor | 10 = Dor insuportável</p>
+                </fieldset>
+            </section>    
+            <section>
+                <h3>Etapa 3 — Revisão</h3>
+                <fieldset>
+                    <legend>Conferência das informações</legend>
+                    <p>Confira as informações preenchidas nas etapas anteriores antes de confirmar o envio do formulário.</p>
+                    <p>Verifique se seus dados de identificação e a descrição dos sintomas estão corretos.</p>
+                </fieldset>
+                <button type="button">Voltar</button>
+                <button type="submit">Confirmar envio</button>
+            </section>
         </form>
 
     </main>

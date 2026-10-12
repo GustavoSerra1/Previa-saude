@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Área de acesso demonstrativo da equipe do Prévia Saúde.">
+    <meta name="description" content="Área de acesso da equipe.">
     <title>Acesso da equipe | Prévia Saúde</title>
 </head>
 <body>
@@ -12,17 +12,42 @@
         <h1>Prévia Saúde</h1>
         <nav aria-label="Navegação principal">
             <a href="index.html">Início</a>
+            <a href="pre-triagem.html">Pré-triagem</a>
             <a href="orientacoes.html">Orientações</a>
-        </nav>
+            <a href="login.html">Área da equipe</a>
+    </nav>
     </header>
     <main>
         <h2>Acesso da equipe</h2>
-        <!-- Futuramente, construiremos o formulário de acesso. -->
-        <p>Área demonstrativa destinada à equipe hospitalar.</p>
+        <p>Esta área é destinada ao acesso da equipe do Prévia Saúde.</p>
+        <section>
+            <h3>Login da equipe</h3>
+                <form>
+                    <fieldset>
+                        <legend>Login da Equipe</legend>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email institucional" required>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                        <label for="hospital">Hospital</label>
+                        <select id="hospital" name="hospital" required>
+                            <option value="">Selecione o hospital</option>
+                            <option value="Clementino-Fraga">Hospital Clementino Fraga</option>
+                            <option value="Laureano">Hospital Laureano</option>
+                            <option value="HULW">Hospital Universitário - HULW</option>
+                            <option value="Trauma">Hospital de Emergência e Trauma Senador Humberto Lucena</option>
+                            <option value="Metropolitano">Hospital Metropolitano Dom José Maria Pires</option>
+                            <option value="Urquiza-Wanderley">Hospital Urquiza Wanderley</option>
+                            <option value="HNSN">Hospital Nossa Senhora das Neves</option>
+                            <option value="Memorial-São-Francisco">Hospital Memorial São Francisco</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit">Entrar</button>
+                </form>
+        </section>
     </main>
     <footer>
         <p>Prévia Saúde — Projeto acadêmico demonstrativo.</p>
         <a href="index.html">Voltar ao início</a>
     </footer>
-</body>
 </html>
